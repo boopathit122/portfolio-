@@ -36,6 +36,35 @@
 
     .hero {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-image-container {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .profile-image-container::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      border-radius: 50%;
+      border: 3px solid #4f8cff;
+    }
+
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
     }
 
     .hero h1 {
@@ -230,6 +259,11 @@
       .title {
         font-size: 30px;
       }
+      
+      .profile-image-container {
+        width: 120px;
+        height: 120px;
+      }
     }
   </style>
 </head>
@@ -239,6 +273,11 @@
   <!-- HERO -->
   <header>
     <div class="container hero">
+
+      <!-- PROFILE IMAGE ADDED HERE -->
+      <div class="profile-image-container">
+        <img src="profile.png" alt="Boopathi T" class="profile-image">
+      </div>
 
       <h1>Hi, I'm <span>Boopathi T</span></h1>
 
