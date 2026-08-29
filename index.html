@@ -4,157 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Boopathi Thiruthani | BCA Student & Developer</title>
-
-  <meta name="description" content="Portfolio of Boopathi Thiruthani, BCA student and aspiring software developer.">
+  <title>Boopathi T | Portfolio</title>
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
     }
 
     body {
-      font-family: Arial, sans-serif;
       background: #0b0f19;
-      color: #ffffff;
+      color: white;
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
     }
 
+    /* HERO */
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(11, 15, 25, 0.92);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      border-bottom: 1px solid #222938;
-    }
-
-    nav {
-      max-width: 1100px;
-      margin: auto;
-      padding: 18px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
-
-    .logo span {
-      color: #4f8cff;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 25px;
-    }
-
-    nav a:hover {
-      color: #4f8cff;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 90px 20px;
-    }
-
-    #home {
-      min-height: 100vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
+      text-align: center;
     }
 
     .hero {
-      max-width: 750px;
-    }
-
-    .hero small {
-      color: #4f8cff;
-      font-size: 17px;
+      width: 100%;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 8vw, 75px);
-      line-height: 1.1;
-      margin: 15px 0;
+      font-size: 55px;
+      margin-bottom: 10px;
     }
 
     .hero h1 span {
       color: #4f8cff;
     }
 
+    .hero h2 {
+      color: #b8c1d1;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
     .hero p {
-      color: #aeb6c7;
-      font-size: 18px;
       max-width: 650px;
-      margin-bottom: 30px;
+      margin: auto;
+      color: #9da7b8;
+      font-size: 18px;
     }
 
     .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
+      margin-top: 30px;
     }
 
     .btn {
-      padding: 13px 22px;
-      border-radius: 8px;
-      border: 1px solid #4f8cff;
       display: inline-block;
-      transition: 0.3s;
-    }
-
-    .btn.primary {
+      padding: 12px 25px;
+      margin: 5px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
       background: #4f8cff;
       color: white;
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid #4f8cff;
     }
 
-    .section-title {
-      font-size: 36px;
-      margin-bottom: 15px;
+    /* SECTIONS */
+    section {
+      padding: 70px 0;
     }
 
-    .section-subtitle {
-      color: #8f99ad;
+    .title {
+      text-align: center;
+      font-size: 35px;
       margin-bottom: 35px;
     }
 
-    .about-text {
-      max-width: 800px;
-      color: #b9c1d1;
+    .title span {
+      color: #4f8cff;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 750px;
+      margin: auto;
+      color: #aeb7c6;
       font-size: 17px;
     }
 
+    /* SKILLS */
     .skills {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 15px;
     }
 
     .skill {
       background: #121827;
-      border: 1px solid #242c3c;
       padding: 20px;
-      border-radius: 12px;
       text-align: center;
+      border-radius: 12px;
+      border: 1px solid #202a3d;
       transition: 0.3s;
     }
 
@@ -163,67 +124,111 @@
       border-color: #4f8cff;
     }
 
+    /* PROJECTS */
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
     .project {
       background: #121827;
-      border: 1px solid #242c3c;
-      border-radius: 14px;
       padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #202a3d;
     }
 
     .project h3 {
       margin-bottom: 10px;
-    }
-
-    .project p {
-      color: #aeb6c7;
-      margin-bottom: 20px;
-    }
-
-    .contact-box {
-      background: #121827;
-      border: 1px solid #242c3c;
-      border-radius: 15px;
-      padding: 30px;
-      max-width: 700px;
-    }
-
-    .contact-box p {
-      margin: 12px 0;
-      color: #c0c7d5;
-    }
-
-    .contact-box a {
       color: #4f8cff;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      border-top: 1px solid #222938;
-      color: #858ea1;
+    .project p {
+      color: #aeb7c6;
     }
 
-    @media (max-width: 650px) {
-      nav ul {
-        display: none;
-      }
+    /* CONTACT */
+    .contact-box {
+      max-width: 650px;
+      margin: auto;
+      background: #121827;
+      padding: 30px;
+      border-radius: 18px;
+      border: 1px solid #202a3d;
+    }
 
-      section {
-        padding: 75px 20px;
-      }
+    .contact-info {
+      margin-bottom: 25px;
+    }
 
-      #home {
-        min-height: 90vh;
-      }
+    .contact-info p {
+      margin: 10px 0;
+      color: #c1c8d4;
+    }
 
+    .contact-info a {
+      color: #4f8cff;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #303b50;
+      background: #0b0f19;
+      color: white;
+      outline: none;
+    }
+
+    textarea {
+      height: 140px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #4f8cff;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #4f8cff;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #3678ed;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #7f899b;
+      border-top: 1px solid #202a3d;
+    }
+
+    @media (max-width: 600px) {
       .hero h1 {
-        font-size: 45px;
+        font-size: 40px;
+      }
+
+      .hero h2 {
+        font-size: 20px;
+      }
+
+      .title {
+        font-size: 30px;
       }
     }
   </style>
@@ -231,73 +236,49 @@
 
 <body>
 
+  <!-- HERO -->
   <header>
-    <nav>
-      <div class="logo">Boopathi<span>.</span></div>
+    <div class="container hero">
 
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+      <h1>Hi, I'm <span>Boopathi T</span></h1>
+
+      <h2>BCA Student | Developer | Tech Enthusiast</h2>
+
+      <p>
+        I am a BCA student passionate about technology, software development,
+        problem solving and building useful digital projects.
+      </p>
+
+      <div class="buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn secondary">Contact Me</a>
+      </div>
+
+    </div>
   </header>
 
-  <main>
 
-    <!-- HOME -->
-    <section id="home">
-      <div class="hero">
-        <small>Hello, I'm</small>
+  <!-- ABOUT -->
+  <section>
+    <div class="container">
 
-        <h1>
-          Boopathi<br>
-          <span>Thiruthani</span>
-        </h1>
+      <h2 class="title">About <span>Me</span></h2>
 
-        <p>
-          BCA student and aspiring software developer passionate about
-          technology, programming and building useful digital solutions.
-        </p>
-
-        <div class="buttons">
-          <a class="btn primary" href="#projects">View My Work</a>
-
-          <a class="btn"
-             href="https://www.linkedin.com/in/boopathithiruthani"
-             target="_blank">
-            LinkedIn
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <h2 class="section-title">About Me</h2>
-
-      <p class="section-subtitle">
-        A little about who I am
+      <p class="about">
+        I am currently pursuing my Bachelor of Computer Applications (BCA).
+        I am continuously developing my programming and software development
+        skills and looking forward to creating real-world technology solutions.
       </p>
 
-      <p class="about-text">
-        I am a BCA student interested in software development and
-        emerging technologies. I am continuously developing my skills
-        in programming, web development, databases and problem solving.
-        My goal is to build practical projects and grow into a professional
-        software developer.
-      </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <h2 class="section-title">Skills</h2>
 
-      <p class="section-subtitle">
-        Technologies and areas I am working with
-      </p>
+  <!-- SKILLS -->
+  <section>
+    <div class="container">
+
+      <h2 class="title">My <span>Skills</span></h2>
 
       <div class="skills">
 
@@ -307,88 +288,108 @@
         <div class="skill">Python</div>
         <div class="skill">C++</div>
         <div class="skill">Java</div>
-        <div class="skill">SQL</div>
         <div class="skill">MongoDB</div>
+        <div class="skill">Git & GitHub</div>
 
       </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2 class="section-title">Projects</h2>
+    </div>
+  </section>
 
-      <p class="section-subtitle">
-        Things I have built and worked on
-      </p>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+
+      <h2 class="title">My <span>Projects</span></h2>
 
       <div class="projects">
 
         <div class="project">
           <h3>Portfolio Website</h3>
-
           <p>
-            A responsive personal portfolio website created using
-            HTML and CSS and hosted using GitHub Pages.
-          </p>
-
-          <a class="btn" href="#home">
-            View Project
-          </a>
-        </div>
-
-        <div class="project">
-          <h3>Student Projects</h3>
-
-          <p>
-            More programming and software projects will be added
-            here as I build them during my BCA journey.
+            A responsive personal portfolio website created using HTML and CSS.
           </p>
         </div>
 
         <div class="project">
-          <h3>Future Projects</h3>
-
+          <h3>Student Project</h3>
           <p>
-            Exploring AI, web development, cloud technologies
-            and useful software solutions.
+            Add your project description here.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Future Project</h3>
+          <p>
+            More technology projects will be added here.
           </p>
         </div>
 
       </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2 class="section-title">Let's Connect</h2>
+    </div>
+  </section>
 
-      <p class="section-subtitle">
-        If you want to contact me, feel free to reach out.
-      </p>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+
+      <h2 class="title">Contact <span>Me</span></h2>
 
       <div class="contact-box">
 
-        <p>
-          📧 Email:
-          <a href="mailto:boopathithiruthani@gmail.com">
-            boopathithiruthani@gmail.com
-          </a>
-        </p>
+        <div class="contact-info">
 
-        <p>
-          🔗 LinkedIn:
-          <a href="https://www.linkedin.com/in/boopathithiruthani"
-             target="_blank">
-            linkedin.com/in/boopathithiruthani
-          </a>
-        </p>
+          <p>
+            📧 Email:
+            <a href="mailto:boopathithiruthani@gmail.com">
+              boopathithiruthani@gmail.com
+            </a>
+          </p>
+
+          <p>
+            🔗 LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/boopathithiruthani"
+              target="_blank">
+              linkedin.com/in/boopathithiruthani
+            </a>
+          </p>
+
+        </div>
+
+        <form>
+
+          <input
+            type="email"
+            placeholder="Your Email Address"
+            required>
+
+          <input
+            type="url"
+            placeholder="Your LinkedIn URL">
+
+          <textarea
+            placeholder="Write your comments or message..."
+            required></textarea>
+
+          <button type="submit">
+            Send Message
+          </button>
+
+        </form>
 
       </div>
-    </section>
 
-  </main>
+    </div>
+  </section>
 
+
+  <!-- FOOTER -->
   <footer>
-    © 2026 Boopathi Thiruthani. All rights reserved.
+    © 2026 Boopathi T. All Rights Reserved.
   </footer>
 
 </body>
