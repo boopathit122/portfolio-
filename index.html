@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Boopathi T | Portfolio</title>
+  <meta name="description"
+        content="BOOPATHI THIURUTHANI | BCA Student | Aspiring Software & Cloud Engineer">
+
+  <title>BOOPATHI THIURUTHANI | Portfolio</title>
 
   <style>
+
+    /* =========================
+       RESET
+    ========================= */
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
     html {
@@ -19,465 +26,1343 @@
     }
 
     body {
-      background: #0b0f19;
-      color: white;
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      background:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(70, 210, 255, 0.15),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 85% 25%,
+          rgba(145, 100, 255, 0.15),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #040914,
+          #091527
+        );
+
+      min-height: 100vh;
       overflow-x: hidden;
+      line-height: 1.6;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    /* PURE CSS POP-UP KEYFRAME ANIMATION */
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px) scale(0.96);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-    }
 
-    .popup-item {
-      opacity: 0;
-      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
+    /* =========================
+       NAVIGATION
+    ========================= */
 
-    /* STAGGERED DELAYS (Elements pop up one after another) */
-    .delay-1 { animation-delay: 0.2s; }
-    .delay-2 { animation-delay: 0.4s; }
-    .delay-3 { animation-delay: 0.6s; }
-    .delay-4 { animation-delay: 0.8s; }
-    .delay-5 { animation-delay: 1.0s; }
+    nav {
+      position: fixed;
 
-    /* HERO */
-    header {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
-    }
+      top: 15px;
+      left: 50%;
 
-    .hero {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+      transform: translateX(-50%);
 
-    /* PERFECT ROUND PROFILE IMAGE */
-    .profile-image-container {
-      width: 160px;
-      height: 160px;
-      margin-bottom: 25px;
-      border-radius: 50%;
-      border: 3px solid #4f8cff;
-      box-shadow: 0 0 20px rgba(79, 140, 255, 0.5);
-      overflow: hidden;
+      width: min(1100px, 94%);
+
+      padding: 9px;
+
       display: flex;
       justify-content: center;
+
+      background:
+        rgba(255, 255, 255, 0.07);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+      border-radius: 25px;
+
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+      z-index: 1000;
+    }
+
+
+    /* =========================
+       GLASS BUTTON
+       ALL BUTTONS
+    ========================= */
+
+    .glass-btn {
+
+      display: inline-flex;
+
       align-items: center;
+      justify-content: center;
+
+      padding: 11px 17px;
+
+      min-height: 44px;
+
+      border-radius: 17px;
+
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,0.13),
+          rgba(255,255,255,0.04)
+        );
+
+      border:
+        1px solid rgba(255,255,255,0.17);
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      box-shadow:
+        inset 0 1px 1px rgba(255,255,255,0.08),
+        0 8px 25px rgba(0,0,0,0.18);
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+      cursor: pointer;
     }
 
-    .profile-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
+    .glass-btn:hover {
+
+      transform:
+        translateY(-3px);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,0.19),
+          rgba(255,255,255,0.07)
+        );
+
+      border-color:
+        rgba(100,220,255,0.5);
+
+      box-shadow:
+        0 12px 35px rgba(0,0,0,0.3);
     }
 
-    .hero h1 {
-      font-size: 55px;
-      margin-bottom: 10px;
+    .primary {
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(80,210,255,0.25),
+          rgba(140,100,255,0.22)
+        );
     }
 
-    .hero h1 span {
-      color: #4f8cff;
+
+    /* =========================
+       NAV LINKS
+    ========================= */
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 7px;
     }
 
-    .hero h2 {
-      color: #b8c1d1;
-      font-weight: normal;
-      margin-bottom: 20px;
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    main {
+
+      width:
+        min(1100px, 92%);
+
+      margin:
+        auto;
     }
 
-    .hero p {
-      max-width: 650px;
-      margin: auto;
-      color: #9da7b8;
-      font-size: 18px;
+
+    section {
+
+      padding:
+        100px 0 50px;
     }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+
+      min-height:
+        100vh;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      text-align:
+        center;
+
+      padding-top:
+        130px;
+    }
+
+
+    .hero-content {
+
+      width:
+        100%;
+
+      animation:
+        fadeUp 0.9s ease;
+    }
+
+
+    /* =========================
+       PROFILE PHOTO
+    ========================= */
+
+    .profile-photo {
+
+      width:
+        155px;
+
+      height:
+        155px;
+
+      margin:
+        0 auto 25px;
+
+      padding:
+        5px;
+
+      border-radius:
+        50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #70ddff,
+          #9a83ff
+        );
+
+      box-shadow:
+        0 18px 50px rgba(0,0,0,0.35),
+        0 0 40px rgba(112,221,255,0.15);
+
+      position:
+        relative;
+    }
+
+
+    .profile-photo::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      inset:
+        -6px;
+
+      border-radius:
+        50%;
+
+      border:
+        1px solid rgba(255,255,255,0.2);
+    }
+
+
+    .profile-photo img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        cover;
+
+      display:
+        block;
+
+      border-radius:
+        50%;
+
+      border:
+        3px solid rgba(255,255,255,0.15);
+    }
+
+
+    /* =========================
+       BADGE
+    ========================= */
+
+    .badge {
+
+      display:
+        inline-block;
+
+      padding:
+        8px 16px;
+
+      border-radius:
+        50px;
+
+      color:
+        #70ddff;
+
+      background:
+        rgba(255,255,255,0.07);
+
+      border:
+        1px solid rgba(255,255,255,0.15);
+
+      backdrop-filter:
+        blur(15px);
+
+      font-size:
+        14px;
+    }
+
+
+    /* =========================
+       HERO TITLE
+    ========================= */
+
+    h1 {
+
+      margin:
+        25px 0;
+
+      font-size:
+        clamp(45px, 9vw, 95px);
+
+      line-height:
+        0.95;
+
+      letter-spacing:
+        -4px;
+    }
+
+
+    .gradient {
+
+      background:
+        linear-gradient(
+          90deg,
+          #ffffff,
+          #70ddff,
+          #a98cff
+        );
+
+      -webkit-background-clip:
+        text;
+
+      background-clip:
+        text;
+
+      color:
+        transparent;
+    }
+
+
+    .hero-description {
+
+      max-width:
+        700px;
+
+      margin:
+        auto;
+
+      color:
+        #aab6c9;
+
+      font-size:
+        18px;
+    }
+
+
+    /* =========================
+       BUTTON GROUP
+    ========================= */
 
     .buttons {
-      margin-top: 30px;
+
+      display:
+        flex;
+
+      justify-content:
+        center;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        12px;
+
+      margin-top:
+        30px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      margin: 5px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      background: #4f8cff;
-      color: white;
-      transition: 0.3s;
+
+    /* =========================
+       GLASS CARDS
+    ========================= */
+
+    .glass-card {
+
+      padding:
+        28px;
+
+      border-radius:
+        28px;
+
+      background:
+        rgba(255,255,255,0.065);
+
+      border:
+        1px solid rgba(255,255,255,0.14);
+
+      backdrop-filter:
+        blur(22px);
+
+      -webkit-backdrop-filter:
+        blur(22px);
+
+      box-shadow:
+        0 25px 70px rgba(0,0,0,0.3);
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(79, 140, 255, 0.4);
+
+    .glass-card:hover {
+
+      transform:
+        translateY(-3px);
+
+      border-color:
+        rgba(112,221,255,0.25);
     }
 
-    .btn.secondary {
-      background: transparent;
-      border: 1px solid #4f8cff;
+
+    /* =========================
+       SECTION TITLE
+    ========================= */
+
+    .section-title {
+
+      font-size:
+        clamp(32px, 5vw, 50px);
+
+      letter-spacing:
+        -1.5px;
+
+      margin-bottom:
+        8px;
     }
 
-    /* SECTIONS */
-    section {
-      padding: 70px 0;
+
+    .section-description {
+
+      color:
+        #9eabbf;
+
+      margin-bottom:
+        25px;
     }
 
-    .title {
-      text-align: center;
-      font-size: 35px;
-      margin-bottom: 35px;
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-text {
+
+      color:
+        #b8c3d3;
+
+      font-size:
+        17px;
     }
 
-    .title span {
-      color: #4f8cff;
+    .about-text strong {
+
+      color:
+        #ffffff;
     }
 
-    .about {
-      text-align: center;
-      max-width: 750px;
-      margin: auto;
-      color: #aeb7c6;
-      font-size: 17px;
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap:
+        20px;
     }
 
-    /* SKILLS */
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 15px;
+
+    .skill-card p {
+
+      color:
+        #aab6c9;
     }
 
-    .skill {
-      background: #121827;
-      padding: 20px;
-      text-align: center;
-      border-radius: 12px;
-      border: 1px solid #202a3d;
-      transition: 0.3s;
+
+    .skill-tags {
+
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        9px;
+
+      margin-top:
+        15px;
     }
 
-    .skill:hover {
-      transform: translateY(-8px) scale(1.03);
-      border-color: #4f8cff;
-      box-shadow: 0 5px 15px rgba(79, 140, 255, 0.25);
+
+    .tag {
+
+      padding:
+        7px 13px;
+
+      border-radius:
+        50px;
+
+      background:
+        rgba(255,255,255,0.06);
+
+      border:
+        1px solid rgba(255,255,255,0.13);
+
+      font-size:
+        14px;
     }
 
-    /* PROJECTS */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+
+    /* =========================
+       EDUCATION
+    ========================= */
+
+    .education-year {
+
+      color:
+        #70ddff;
+
+      font-weight:
+        bold;
+
+      margin-bottom:
+        5px;
     }
 
-    .project {
-      background: #121827;
-      padding: 25px;
-      border-radius: 15px;
-      border: 1px solid #202a3d;
-      transition: 0.3s;
+
+    .education p {
+
+      color:
+        #aab6c9;
     }
 
-    .project:hover {
-      transform: translateY(-8px);
-      border-color: #4f8cff;
-      box-shadow: 0 8px 20px rgba(79, 140, 255, 0.25);
+
+    /* =========================
+       CERTIFICATION
+    ========================= */
+
+    .certificate p {
+
+      color:
+        #aab6c9;
     }
 
-    .project h3 {
-      margin-bottom: 10px;
-      color: #4f8cff;
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        0.9fr 1.1fr;
+
+      gap:
+        20px;
     }
 
-    .project p {
-      color: #aeb7c6;
+
+    form {
+
+      display:
+        grid;
+
+      gap:
+        12px;
     }
 
-    /* CONTACT */
-    .contact-box {
-      max-width: 650px;
-      margin: auto;
-      background: #121827;
-      padding: 30px;
-      border-radius: 18px;
-      border: 1px solid #202a3d;
-    }
-
-    .contact-info {
-      margin-bottom: 25px;
-    }
-
-    .contact-info p {
-      margin: 10px 0;
-      color: #c1c8d4;
-    }
-
-    .contact-info a {
-      color: #4f8cff;
-      text-decoration: none;
-      word-break: break-all;
-    }
 
     input,
     textarea {
-      width: 100%;
-      padding: 14px;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: 1px solid #303b50;
-      background: #0b0f19;
-      color: white;
-      outline: none;
-      transition: 0.3s;
+
+      width:
+        100%;
+
+      padding:
+        14px 15px;
+
+      border-radius:
+        16px;
+
+      border:
+        1px solid rgba(255,255,255,0.14);
+
+      background:
+        rgba(255,255,255,0.05);
+
+      color:
+        #ffffff;
+
+      outline:
+        none;
+
+      font-size:
+        15px;
     }
 
-    textarea {
-      height: 140px;
-      resize: vertical;
+
+    input::placeholder,
+    textarea::placeholder {
+
+      color:
+        #8491a5;
     }
+
 
     input:focus,
     textarea:focus {
-      border-color: #4f8cff;
-      box-shadow: 0 0 10px rgba(79, 140, 255, 0.3);
+
+      border-color:
+        #70ddff;
+
+      box-shadow:
+        0 0 0 3px
+        rgba(112,221,255,0.08);
     }
 
-    button {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 8px;
-      background: #4f8cff;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
+
+    textarea {
+
+      min-height:
+        140px;
+
+      resize:
+        vertical;
     }
 
-    button:hover {
-      background: #3678ed;
-      transform: translateY(-2px);
-    }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
-      text-align: center;
-      padding: 25px;
-      color: #7f899b;
-      border-top: 1px solid #202a3d;
+
+      text-align:
+        center;
+
+      padding:
+        50px 20px 30px;
+
+      color:
+        #768398;
+
+      font-size:
+        14px;
     }
 
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 40px;
+
+    /* =========================
+       ANIMATION
+    ========================= */
+
+    @keyframes fadeUp {
+
+      from {
+
+        opacity:
+          0;
+
+        transform:
+          translateY(25px);
       }
 
-      .hero h2 {
-        font-size: 20px;
-      }
+      to {
 
-      .title {
-        font-size: 30px;
-      }
+        opacity:
+          1;
 
-      .profile-image-container {
-        width: 130px;
-        height: 130px;
+        transform:
+          translateY(0);
       }
     }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .skills-grid,
+      .contact-grid {
+
+        grid-template-columns:
+          1fr;
+      }
+
+      .nav-links {
+
+        width:
+          100%;
+      }
+
+      .nav-links .optional {
+
+        display:
+          none;
+      }
+
+      h1 {
+
+        letter-spacing:
+          -2px;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 500px) {
+
+      nav {
+
+        width:
+          96%;
+
+        padding:
+          7px;
+
+        border-radius:
+          20px;
+      }
+
+
+      .nav-links {
+
+        gap:
+          5px;
+      }
+
+
+      .nav-links .glass-btn {
+
+        padding:
+          9px 12px;
+
+        min-height:
+          40px;
+
+        font-size:
+          13px;
+      }
+
+
+      .profile-photo {
+
+        width:
+          120px;
+
+        height:
+          120px;
+
+        margin-bottom:
+          20px;
+      }
+
+
+      main {
+
+        width:
+          calc(100% - 22px);
+      }
+
+
+      section {
+
+        padding:
+          80px 0 35px;
+      }
+
+
+      .glass-card {
+
+        padding:
+          20px;
+
+        border-radius:
+          22px;
+      }
+
+
+      .hero-description {
+
+        font-size:
+          16px;
+      }
+
+
+      .buttons {
+
+        flex-direction:
+          column;
+      }
+
+
+      .glass-btn {
+
+        width:
+          100%;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- HERO -->
-  <header>
-    <div class="container hero">
 
-      <div class="profile-image-container popup-item delay-1">
-        <img src="58224.png" alt="Boopathi T" class="profile-image">
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+
+    <div class="nav-links">
+
+      <a
+        href="#home"
+        class="glass-btn"
+      >
+        Home
+      </a>
+
+
+      <a
+        href="#about"
+        class="glass-btn optional"
+      >
+        About
+      </a>
+
+
+      <a
+        href="#skills"
+        class="glass-btn optional"
+      >
+        Skills
+      </a>
+
+
+      <a
+        href="#education"
+        class="glass-btn optional"
+      >
+        Education
+      </a>
+
+
+      <a
+        href="#contact"
+        class="glass-btn primary"
+      >
+        Contact Us
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <main>
+
+
+    <!-- =========================
+         HOME
+    ========================= -->
+
+    <section
+      id="home"
+      class="hero"
+    >
+
+      <div class="hero-content">
+
+
+        <!-- YOUR IMAGE -->
+
+        <div class="profile-photo">
+
+          <img
+            src="58224.png"
+            alt="BOOPATHI THIURUTHANI"
+          >
+
+        </div>
+
+
+        <span class="badge">
+
+          BCA Student • Aspiring Software & Cloud Engineer
+
+        </span>
+
+
+        <h1>
+
+          BOOPATHI
+
+          <br>
+
+          <span class="gradient">
+            THIURUTHANI
+          </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+          BCA Student | Aspiring Software & Cloud Engineer.
+
+          Passionate about technology, programming,
+          continuous learning and building a strong
+          technical foundation for the future.
+
+        </p>
+
+
+        <div class="buttons">
+
+
+          <a
+            href="#about"
+            class="glass-btn primary"
+          >
+            Explore Profile ↓
+          </a>
+
+
+          <a
+            href="#contact"
+            class="glass-btn"
+          >
+            Contact Us
+          </a>
+
+
+          <a
+            href="links.html"
+            class="glass-btn"
+          >
+            LinkedIn ↗
+          </a>
+
+
+          <a
+            href="links.html"
+            class="glass-btn"
+          >
+            Email ↗
+          </a>
+
+
+        </div>
+
       </div>
 
-      <h1 class="popup-item delay-2">Hi, I'm <span>Boopathi T</span></h1>
+    </section>
 
-      <h2 class="popup-item delay-3">BCA Student | Developer | Tech Enthusiast</h2>
 
-      <p class="popup-item delay-4">
-        I am a BCA student passionate about technology, software development,
-        problem solving and building useful digital projects.
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+      <h2 class="section-title">
+        About Me
+      </h2>
+
+
+      <p class="section-description">
+
+        My journey toward becoming a Software & Cloud Engineer.
+
       </p>
 
-      <div class="buttons popup-item delay-5">
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="#contact" class="btn secondary">Contact Me</a>
+
+      <div class="glass-card about-text">
+
+        I am
+        <strong>
+          BOOPATHI THIURUTHANI
+        </strong>,
+        a BCA student at Muthayammal College of Arts and Science
+        with a strong ambition to build a career in software
+        and cloud engineering.
+
+        <br><br>
+
+        I am developing my programming skills with Python
+        and exploring the technologies that shape modern
+        software development and cloud computing.
+
+        <br><br>
+
+        I believe in continuous learning, practical development,
+        and building a strong technical foundation. My goal is
+        to grow into a skilled Software and Cloud Engineer
+        and contribute to meaningful technology projects.
+
       </div>
 
-    </div>
-  </header>
+    </section>
 
 
-  <!-- ABOUT -->
-  <section>
-    <div class="container popup-item delay-2">
+    <!-- =========================
+         SKILLS
+    ========================= -->
 
-      <h2 class="title">About <span>Me</span></h2>
+    <section id="skills">
 
-      <p class="about">
-        I am currently pursuing my Bachelor of Computer Applications (BCA).
-        I am continuously developing my programming and software development
-        skills and looking forward to creating real-world technology solutions.
+      <h2 class="section-title">
+        Skills
+      </h2>
+
+
+      <p class="section-description">
+        My current technical foundation.
       </p>
 
-    </div>
-  </section>
+
+      <div class="skills-grid">
 
 
-  <!-- SKILLS -->
-  <section>
-    <div class="container">
+        <div class="glass-card skill-card">
 
-      <h2 class="title popup-item delay-1">My <span>Skills</span></h2>
+          <h3>
+            Python
+          </h3>
 
-      <div class="skills">
+          <p>
+            Aspiring Python Developer
+          </p>
 
-        <div class="skill popup-item delay-1">HTML</div>
-        <div class="skill popup-item delay-2">CSS</div>
-        <div class="skill popup-item delay-3">JavaScript</div>
-        <div class="skill popup-item delay-4">Python</div>
-        <div class="skill popup-item delay-1">C++</div>
-        <div class="skill popup-item delay-2">Java</div>
-        <div class="skill popup-item delay-3">MongoDB</div>
-        <div class="skill popup-item delay-4">Git & GitHub</div>
+
+          <div class="skill-tags">
+
+            <span class="tag">
+              Python
+            </span>
+
+            <span class="tag">
+              Programming
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="glass-card skill-card">
+
+          <h3>
+            GitHub
+          </h3>
+
+          <p>
+            Basic Experience
+          </p>
+
+
+          <div class="skill-tags">
+
+            <span class="tag">
+              GitHub
+            </span>
+
+            <span class="tag">
+              Version Control
+            </span>
+
+          </div>
+
+        </div>
+
 
       </div>
 
-    </div>
-  </section>
+    </section>
 
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container">
+    <!-- =========================
+         EDUCATION
+    ========================= -->
 
-      <h2 class="title popup-item delay-1">My <span>Projects</span></h2>
+    <section id="education">
 
-      <div class="projects">
+      <h2 class="section-title">
+        Education
+      </h2>
 
-        <div class="project popup-item delay-2">
-          <h3>Portfolio Website</h3>
-          <p>
-            A responsive personal portfolio website created using HTML and CSS.
-          </p>
+
+      <div class="glass-card">
+
+        <div class="education-year">
+          Expected Graduation — 2028
         </div>
 
-        <div class="project popup-item delay-3">
-          <h3>Student Project</h3>
-          <p>
-            Add your project description here.
-          </p>
-        </div>
 
-        <div class="project popup-item delay-4">
-          <h3>Future Project</h3>
-          <p>
-            More technology projects will be added here.
-          </p>
-        </div>
+        <h3>
+          Bachelor of Computer Applications (BCA)
+        </h3>
+
+
+        <p>
+
+          Muthayammal College of Arts and Science
+
+          <br>
+
+          Currently studying — 2nd Year
+
+        </p>
 
       </div>
 
-    </div>
-  </section>
+    </section>
 
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
+    <!-- =========================
+         CERTIFICATION
+    ========================= -->
 
-      <h2 class="title popup-item delay-1">Contact <span>Me</span></h2>
+    <section>
 
-      <div class="contact-box popup-item delay-2">
+      <h2 class="section-title">
+        Certification
+      </h2>
 
-        <div class="contact-info">
 
-          <p>
-            📧 Email:
-            <a href="mailto:boopathithiruthani@gmail.com">
-              boopathithiruthani@gmail.com
-            </a>
+      <div class="glass-card certificate">
+
+        <h3>
+          MongoDB Basics
+        </h3>
+
+
+        <p>
+          MongoDB
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact">
+
+      <h2 class="section-title">
+        Contact Us
+      </h2>
+
+
+      <p class="section-description">
+
+        Have an opportunity, idea or question?
+        Feel free to contact me.
+
+      </p>
+
+
+      <div class="contact-grid">
+
+
+        <!-- CONTACT DETAILS -->
+
+        <div class="glass-card">
+
+          <h3>
+            Get In Touch
+          </h3>
+
+
+          <p
+            style="
+              color:#aab6c9;
+              margin-top:8px;
+            "
+          >
+
+            You can connect with me through
+            LinkedIn or email.
+
           </p>
 
-          <p>
-            🔗 LinkedIn:
+
+          <div class="buttons">
+
+
             <a
-              href="https://www.linkedin.com/in/boopathithiruthani"
-              target="_blank">
-              linkedin.com/in/boopathithiruthani
+              href="links.html"
+              class="glass-btn"
+            >
+              LinkedIn ↗
             </a>
-          </p>
+
+
+            <a
+              href="links.html"
+              class="glass-btn"
+            >
+              Email ↗
+            </a>
+
+
+          </div>
 
         </div>
 
-        <!-- FORMSPREE CONTACT FORM -->
-        <form
-          action="https://formspree.io/f/xljeeykw"
-          method="POST">
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email Address"
-            required>
+        <!-- FORMSPREE FORM -->
 
-          <input
-            type="url"
-            name="linkedin"
-            placeholder="Your LinkedIn URL">
+        <div class="glass-card">
 
-          <textarea
-            name="message"
-            placeholder="Write your comments or message..."
-            required></textarea>
 
-          <button type="submit">
-            Send Message
-          </button>
+          <!--
+            REPLACE YOUR_FORMSPREE_ID
+            WITH YOUR EXISTING FORMSPREE ID.
+          -->
 
-        </form>
+
+          <form
+            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+            method="POST"
+          >
+
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+            >
+
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            >
+
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+
+
+            <button
+              type="submit"
+              class="glass-btn primary"
+            >
+              Submit
+            </button>
+
+
+          </form>
+
+        </div>
+
 
       </div>
 
-    </div>
-  </section>
+    </section>
 
 
-  <!-- FOOTER -->
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
-    © 2026 Boopathi T. All Rights Reserved.
+
+    © 2026 BOOPATHI THIURUTHANI
+
   </footer>
+
 
 </body>
 </html>
