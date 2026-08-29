@@ -41,29 +41,25 @@
       align-items: center;
     }
 
+    /* PERFECT ROUND PROFILE IMAGE */
     .profile-image-container {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       margin-bottom: 25px;
-      position: relative;
-    }
-
-    .profile-image-container::after {
-      content: '';
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      width: calc(100% + 10px);
-      height: calc(100% + 10px);
       border-radius: 50%;
       border: 3px solid #4f8cff;
+      box-shadow: 0 0 15px rgba(79, 140, 255, 0.4);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .profile-image {
       width: 100%;
       height: 100%;
-      border-radius: 50%;
       object-fit: cover;
+      object-position: center top;
       display: block;
     }
 
@@ -261,8 +257,8 @@
       }
       
       .profile-image-container {
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
       }
     }
   </style>
@@ -274,7 +270,7 @@
   <header>
     <div class="container hero">
 
-      <!-- PROFILE IMAGE ADDED HERE -->
+      <!-- PROFILE IMAGE -->
       <div class="profile-image-container">
         <img src="58224.png" alt="Boopathi T" class="profile-image">
       </div>
