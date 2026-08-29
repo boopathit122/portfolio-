@@ -1,6 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Font Awesome Icons + Social Media Glassy Style -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+.social-media {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.social-media h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+    text-decoration: none;
+
+    /* Glassy bubble */
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    color: white;
+    font-size: 25px;
+
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+</style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -1360,6 +1408,30 @@
     © 2026 BOOPATHI THIURUTHANI
 
   </footer>
+  <!-- Social Media Section -->
+<section class="social-media">
+    <h2>Social Media</h2>
+
+    <div class="social-icons">
+
+        <!-- X -->
+        <a href="https://x.com/BoopathiT28"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="X">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/__boopathi_official/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+    </div>
+</section>
 
 
 </body>
