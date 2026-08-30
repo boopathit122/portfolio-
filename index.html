@@ -1,143 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Font Awesome Icons + Social Media Glassy Style -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<style>
-.social-media {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.social-media h2 {
-    margin-bottom: 25px;
-    font-size: 28px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-icons a {
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 18px;
-    text-decoration: none;
-
-    /* Glassy bubble */
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-
-    color: white;
-    font-size: 25px;
-
-    transition: 0.3s ease;
-}
-
-.social-icons a:hover {
-    transform: translateY(-5px) scale(1.05);
-}
-  /* ☀️🌙 Light / Dark Mode */
-
-body {
-    transition: background 0.4s ease, color 0.4s ease;
-}
-
-.theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
-}
-
-.theme-toggle:hover {
-    transform: scale(1.08);
-}
-
-/* ☀️ LIGHT MODE */
-
-body.light-mode {
-    background: #f5f7fa;
-    color: #111827;
-}
-
-body.light-mode .theme-toggle {
-    background: rgba(255, 255, 255, 0.75);
-    color: #111827;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-/* Clear text */
-
-body.light-mode h1,
-body.light-mode h2,
-body.light-mode h3,
-body.light-mode h4,
-body.light-mode h5,
-body.light-mode h6,
-body.light-mode p,
-body.light-mode span,
-body.light-mode li,
-body.light-mode label,
-body.light-mode a {
-    color: #111827;
-}
-
-/* Glass cards */
-
-body.light-mode .glass,
-body.light-mode .card,
-body.light-mode .social-icons a {
-    background: rgba(255, 255, 255, 0.65);
-    border-color: rgba(0, 0, 0, 0.12);
-}
-
-/* Social Media heading */
-
-body.light-mode .social-media h2 {
-    color: #111827;
-}
-</style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-  <meta name="description"
-        content="BOOPATHI THIRUTHANI | BCA Student | Aspiring Software & Cloud Engineer">
+  <!-- Primary SEO Meta Tags -->
+  <title>BOOPATHI THIRUTHANI | Aspiring Software & Cloud Engineer</title>
+  <meta name="title" content="BOOPATHI THIRUTHANI | Aspiring Software & Cloud Engineer">
+  <meta name="description" content="Official portfolio of BOOPATHI THIRUTHANI, a BCA student at Muthayammal College of Arts and Science specializing in Python programming, software development, and cloud engineering.">
+  <meta name="keywords" content="BOOPATHI THIRUTHANI, Boopathi Thiruthani Portfolio, Boopathi Thiruthani BCA, Boopathi Thiruthani Software Engineer, Boopathi Thiruthani Muthayammal College, Boopathi Thiruthani Cloud Engineer">
+  <meta name="author" content="BOOPATHI THIRUTHANI">
+  <link rel="canonical" href="https://yourdomain.com/">
 
-  <title>BOOPATHI THIRUTHANI | Portfolio</title>
+  <!-- Open Graph / Facebook / LinkedIn / Meta AI -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:title" content="BOOPATHI THIRUTHANI | Aspiring Software & Cloud Engineer">
+  <meta property="og:description" content="Explore the portfolio of BOOPATHI THIRUTHANI — BCA Student, Python Developer, and Aspiring Cloud Engineer.">
+  <meta property="og:image" content="https://yourdomain.com/58224.png">
+  <meta property="og:image:alt" content="BOOPATHI THIRUTHANI Profile Photo">
+  <meta property="og:locale" content="en_US">
+  <meta property="profile:first_name" content="Boopathi">
+  <meta property="profile:last_name" content="Thiruthani">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@BoopathiT28">
+  <meta name="twitter:creator" content="@BoopathiT28">
+  <meta name="twitter:title" content="BOOPATHI THIRUTHANI | Portfolio">
+  <meta name="twitter:description" content="BCA Student & Aspiring Software & Cloud Engineer specializing in Python and modern web development.">
+  <meta name="twitter:image" content="https://yourdomain.com/58224.png">
+
+  <!-- JSON-LD Structured Data for AI & Search Engines (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://yourdomain.com/#person",
+        "name": "BOOPATHI THIRUTHANI",
+        "givenName": "Boopathi",
+        "familyName": "Thiruthani",
+        "url": "https://yourdomain.com",
+        "image": "https://yourdomain.com/58224.png",
+        "jobTitle": "Aspiring Software & Cloud Engineer",
+        "worksFor": {
+          "@type": "EducationalOrganization",
+          "name": "Muthayammal College of Arts and Science"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Muthayammal College of Arts and Science"
+        },
+        "knowsAbout": [
+          "Python",
+          "Software Engineering",
+          "Cloud Computing",
+          "GitHub",
+          "MongoDB",
+          "Web Development"
+        ],
+        "sameAs": [
+          "https://x.com/BoopathiT28",
+          "https://www.instagram.com/__boopathi_official/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://yourdomain.com/#website",
+        "url": "https://yourdomain.com",
+        "name": "BOOPATHI THIRUTHANI Portfolio",
+        "publisher": {
+          "@id": "https://yourdomain.com/#person"
+        }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://yourdomain.com/#webpage",
+        "url": "https://yourdomain.com",
+        "name": "BOOPATHI THIRUTHANI | Official Portfolio",
+        "mainEntity": {
+          "@id": "https://yourdomain.com/#person"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
-
     /* =========================
-       RESET
+       RESET & BASE STYLES
     ========================= */
-
     * {
       margin: 0;
       padding: 0;
@@ -167,10 +125,10 @@ body.light-mode .social-media h2 {
           #040914,
           #091527
         );
-
       min-height: 100vh;
       overflow-x: hidden;
       line-height: 1.6;
+      transition: background 0.4s ease, color 0.4s ease;
     }
 
     a {
@@ -178,1367 +136,699 @@ body.light-mode .social-media h2 {
       text-decoration: none;
     }
 
+    /* =========================
+       THEME TOGGLE
+    ========================= */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      transition: 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.08);
+    }
+
+    body.light-mode {
+      background: #f5f7fa;
+      color: #111827;
+    }
+
+    body.light-mode .theme-toggle {
+      background: rgba(255, 255, 255, 0.75);
+      color: #111827;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    body.light-mode h1,
+    body.light-mode h2,
+    body.light-mode h3,
+    body.light-mode h4,
+    body.light-mode h5,
+    body.light-mode h6,
+    body.light-mode p,
+    body.light-mode span,
+    body.light-mode li,
+    body.light-mode label,
+    body.light-mode a {
+      color: #111827;
+    }
+
+    body.light-mode .glass-card,
+    body.light-mode .social-icons a {
+      background: rgba(255, 255, 255, 0.65);
+      border-color: rgba(0, 0, 0, 0.12);
+    }
+
+    body.light-mode .social-media h2 {
+      color: #111827;
+    }
 
     /* =========================
        NAVIGATION
     ========================= */
-
     nav {
       position: fixed;
-
       top: 15px;
       left: 50%;
-
       transform: translateX(-50%);
-
       width: min(1100px, 94%);
-
       padding: 9px;
-
       display: flex;
       justify-content: center;
-
-      background:
-        rgba(255, 255, 255, 0.07);
-
-      border:
-        1px solid rgba(255, 255, 255, 0.15);
-
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 25px;
-
       backdrop-filter: blur(22px);
       -webkit-backdrop-filter: blur(22px);
-
-      box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.35);
-
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
       z-index: 1000;
     }
 
-
-    /* =========================
-       GLASS BUTTON
-       ALL BUTTONS
-    ========================= */
-
-    .glass-btn {
-
-      display: inline-flex;
-
+    .nav-links {
+      display: flex;
       align-items: center;
       justify-content: center;
+      gap: 7px;
+    }
 
+    .glass-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 11px 17px;
-
       min-height: 44px;
-
       border-radius: 17px;
-
       color: #ffffff;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(255,255,255,0.13),
-          rgba(255,255,255,0.04)
-        );
-
-      border:
-        1px solid rgba(255,255,255,0.17);
-
+      background: linear-gradient(135deg, rgba(255,255,255,0.13), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.17);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
-
-      box-shadow:
-        inset 0 1px 1px rgba(255,255,255,0.08),
-        0 8px 25px rgba(0,0,0,0.18);
-
-      transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.08), 0 8px 25px rgba(0,0,0,0.18);
+      transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
     }
 
     .glass-btn:hover {
-
-      transform:
-        translateY(-3px);
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(255,255,255,0.19),
-          rgba(255,255,255,0.07)
-        );
-
-      border-color:
-        rgba(100,220,255,0.5);
-
-      box-shadow:
-        0 12px 35px rgba(0,0,0,0.3);
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.19), rgba(255,255,255,0.07));
+      border-color: rgba(100,220,255,0.5);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.3);
     }
 
     .primary {
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(80,210,255,0.25),
-          rgba(140,100,255,0.22)
-        );
+      background: linear-gradient(135deg, rgba(80,210,255,0.25), rgba(140,100,255,0.22));
     }
 
-
     /* =========================
-       NAV LINKS
+       MAIN & SECTIONS
     ========================= */
-
-    .nav-links {
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 7px;
-    }
-
-
-    /* =========================
-       MAIN
-    ========================= */
-
     main {
-
-      width:
-        min(1100px, 92%);
-
-      margin:
-        auto;
+      width: min(1100px, 92%);
+      margin: auto;
     }
-
 
     section {
-
-      padding:
-        100px 0 50px;
+      padding: 100px 0 50px;
     }
 
-
-    /* =========================
-       HERO
-    ========================= */
-
+    /* HERO */
     .hero {
-
-      min-height:
-        100vh;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      text-align:
-        center;
-
-      padding-top:
-        130px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 130px;
     }
-
 
     .hero-content {
-
-      width:
-        100%;
-
-      animation:
-        fadeUp 0.9s ease;
+      width: 100%;
+      animation: fadeUp 0.9s ease;
     }
-
-
-    /* =========================
-       PROFILE PHOTO
-    ========================= */
 
     .profile-photo {
-
-      width:
-        155px;
-
-      height:
-        155px;
-
-      margin:
-        0 auto 25px;
-
-      padding:
-        5px;
-
-      border-radius:
-        50%;
-
-      background:
-        linear-gradient(
-          135deg,
-          #70ddff,
-          #9a83ff
-        );
-
-      box-shadow:
-        0 18px 50px rgba(0,0,0,0.35),
-        0 0 40px rgba(112,221,255,0.15);
-
-      position:
-        relative;
+      width: 155px;
+      height: 155px;
+      margin: 0 auto 25px;
+      padding: 5px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #70ddff, #9a83ff);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.35), 0 0 40px rgba(112,221,255,0.15);
+      position: relative;
     }
-
 
     .profile-photo::before {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      inset:
-        -6px;
-
-      border-radius:
-        50%;
-
-      border:
-        1px solid rgba(255,255,255,0.2);
+      content: "";
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
     }
-
 
     .profile-photo img {
-
-      width:
-        100%;
-
-      height:
-        100%;
-
-      object-fit:
-        cover;
-
-      display:
-        block;
-
-      border-radius:
-        50%;
-
-      border:
-        3px solid rgba(255,255,255,0.15);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.15);
     }
-
-
-    /* =========================
-       BADGE
-    ========================= */
 
     .badge {
-
-      display:
-        inline-block;
-
-      padding:
-        8px 16px;
-
-      border-radius:
-        50px;
-
-      color:
-        #70ddff;
-
-      background:
-        rgba(255,255,255,0.07);
-
-      border:
-        1px solid rgba(255,255,255,0.15);
-
-      backdrop-filter:
-        blur(15px);
-
-      font-size:
-        14px;
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 50px;
+      color: #70ddff;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(15px);
+      font-size: 14px;
     }
-
-
-    /* =========================
-       HERO TITLE
-    ========================= */
 
     h1 {
-
-      margin:
-        25px 0;
-
-      font-size:
-        clamp(45px, 9vw, 95px);
-
-      line-height:
-        0.95;
-
-      letter-spacing:
-        -4px;
+      margin: 25px 0;
+      font-size: clamp(45px, 9vw, 95px);
+      line-height: 0.95;
+      letter-spacing: -4px;
     }
-
 
     .gradient {
-
-      background:
-        linear-gradient(
-          90deg,
-          #ffffff,
-          #70ddff,
-          #a98cff
-        );
-
-      -webkit-background-clip:
-        text;
-
-      background-clip:
-        text;
-
-      color:
-        transparent;
+      background: linear-gradient(90deg, #ffffff, #70ddff, #a98cff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-
 
     .hero-description {
-
-      max-width:
-        700px;
-
-      margin:
-        auto;
-
-      color:
-        #aab6c9;
-
-      font-size:
-        18px;
+      max-width: 700px;
+      margin: auto;
+      color: #aab6c9;
+      font-size: 18px;
     }
-
-
-    /* =========================
-       BUTTON GROUP
-    ========================= */
 
     .buttons {
-
-      display:
-        flex;
-
-      justify-content:
-        center;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        12px;
-
-      margin-top:
-        30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
     }
 
-
-    /* =========================
-       GLASS CARDS
-    ========================= */
-
+    /* GLASS CARDS */
     .glass-card {
-
-      padding:
-        28px;
-
-      border-radius:
-        28px;
-
-      background:
-        rgba(255,255,255,0.065);
-
-      border:
-        1px solid rgba(255,255,255,0.14);
-
-      backdrop-filter:
-        blur(22px);
-
-      -webkit-backdrop-filter:
-        blur(22px);
-
-      box-shadow:
-        0 25px 70px rgba(0,0,0,0.3);
-
-      transition:
-        transform 0.3s ease,
-        border-color 0.3s ease;
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.065);
+      border: 1px solid rgba(255,255,255,0.14);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
-
 
     .glass-card:hover {
-
-      transform:
-        translateY(-3px);
-
-      border-color:
-        rgba(112,221,255,0.25);
+      transform: translateY(-3px);
+      border-color: rgba(112,221,255,0.25);
     }
-
-
-    /* =========================
-       SECTION TITLE
-    ========================= */
 
     .section-title {
-
-      font-size:
-        clamp(32px, 5vw, 50px);
-
-      letter-spacing:
-        -1.5px;
-
-      margin-bottom:
-        8px;
+      font-size: clamp(32px, 5vw, 50px);
+      letter-spacing: -1.5px;
+      margin-bottom: 8px;
     }
-
 
     .section-description {
-
-      color:
-        #9eabbf;
-
-      margin-bottom:
-        25px;
+      color: #9eabbf;
+      margin-bottom: 25px;
     }
 
-
-    /* =========================
-       ABOUT
-    ========================= */
-
+    /* ABOUT & SKILLS */
     .about-text {
-
-      color:
-        #b8c3d3;
-
-      font-size:
-        17px;
+      color: #b8c3d3;
+      font-size: 17px;
     }
 
     .about-text strong {
-
-      color:
-        #ffffff;
+      color: #ffffff;
     }
-
-
-    /* =========================
-       SKILLS
-    ========================= */
 
     .skills-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(2, 1fr);
-
-      gap:
-        20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
-
 
     .skill-card p {
-
-      color:
-        #aab6c9;
+      color: #aab6c9;
     }
-
 
     .skill-tags {
-
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        9px;
-
-      margin-top:
-        15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 15px;
     }
-
 
     .tag {
-
-      padding:
-        7px 13px;
-
-      border-radius:
-        50px;
-
-      background:
-        rgba(255,255,255,0.06);
-
-      border:
-        1px solid rgba(255,255,255,0.13);
-
-      font-size:
-        14px;
+      padding: 7px 13px;
+      border-radius: 50px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.13);
+      font-size: 14px;
     }
-
-
-    /* =========================
-       EDUCATION
-    ========================= */
 
     .education-year {
-
-      color:
-        #70ddff;
-
-      font-weight:
-        bold;
-
-      margin-bottom:
-        5px;
+      color: #70ddff;
+      font-weight: bold;
+      margin-bottom: 5px;
     }
 
-
-    .education p {
-
-      color:
-        #aab6c9;
+    .education p, .certificate p {
+      color: #aab6c9;
     }
 
-
-    /* =========================
-       CERTIFICATION
-    ========================= */
-
-    .certificate p {
-
-      color:
-        #aab6c9;
-    }
-
-
-    /* =========================
-       CONTACT
-    ========================= */
-
+    /* CONTACT & FORM */
     .contact-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        0.9fr 1.1fr;
-
-      gap:
-        20px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 20px;
     }
-
 
     form {
-
-      display:
-        grid;
-
-      gap:
-        12px;
+      display: grid;
+      gap: 12px;
     }
 
-
-    input,
-    textarea {
-
-      width:
-        100%;
-
-      padding:
-        14px 15px;
-
-      border-radius:
-        16px;
-
-      border:
-        1px solid rgba(255,255,255,0.14);
-
-      background:
-        rgba(255,255,255,0.05);
-
-      color:
-        #ffffff;
-
-      outline:
-        none;
-
-      font-size:
-        15px;
+    input, textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      color: #ffffff;
+      outline: none;
+      font-size: 15px;
     }
 
-
-    input::placeholder,
-    textarea::placeholder {
-
-      color:
-        #8491a5;
+    input::placeholder, textarea::placeholder {
+      color: #8491a5;
     }
 
-
-    input:focus,
-    textarea:focus {
-
-      border-color:
-        #70ddff;
-
-      box-shadow:
-        0 0 0 3px
-        rgba(112,221,255,0.08);
+    input:focus, textarea:focus {
+      border-color: #70ddff;
+      box-shadow: 0 0 0 3px rgba(112,221,255,0.08);
     }
-
 
     textarea {
-
-      min-height:
-        140px;
-
-      resize:
-        vertical;
+      min-height: 140px;
+      resize: vertical;
     }
-
 
     /* =========================
-       FOOTER
+       FOUR INTERACTIVE EMOJI SHAPES
     ========================= */
+    .emoji-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .shape-emoji {
+      width: 65px;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .shape-emoji svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .shape-circle {
+      border-radius: 50%;
+      background: #ff5964;
+      box-shadow: 0 10px 20px rgba(255, 89, 100, 0.3);
+    }
+
+    .shape-square {
+      border-radius: 16px;
+      background: #35a7ff;
+      box-shadow: 0 10px 20px rgba(53, 167, 255, 0.3);
+    }
+
+    .shape-triangle {
+      background: #ffe74c;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      box-shadow: 0 10px 20px rgba(255, 231, 76, 0.3);
+    }
+
+    .shape-pill {
+      border-radius: 30px;
+      background: #38b000;
+      box-shadow: 0 10px 20px rgba(56, 176, 0, 0.3);
+    }
+
+    .shape-emoji.turned-away {
+      transform: rotateY(180deg);
+    }
+
+    /* =========================
+       SOCIAL MEDIA & FOOTER
+    ========================= */
+    .social-media {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .social-media h2 {
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      color: white;
+      font-size: 25px;
+      transition: 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
 
     footer {
-
-      text-align:
-        center;
-
-      padding:
-        50px 20px 30px;
-
-      color:
-        #768398;
-
-      font-size:
-        14px;
+      text-align: center;
+      padding: 50px 20px 30px;
+      color: #768398;
+      font-size: 14px;
     }
-
-
-    /* =========================
-       ANIMATION
-    ========================= */
 
     @keyframes fadeUp {
-
-      from {
-
-        opacity:
-          0;
-
-        transform:
-          translateY(25px);
-      }
-
-      to {
-
-        opacity:
-          1;
-
-        transform:
-          translateY(0);
-      }
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-
-    /* =========================
-       TABLET
-    ========================= */
-
+    /* MEDIA QUERIES */
     @media (max-width: 800px) {
-
-      .skills-grid,
-      .contact-grid {
-
-        grid-template-columns:
-          1fr;
-      }
-
-      .nav-links {
-
-        width:
-          100%;
-      }
-
-      .nav-links .optional {
-
-        display:
-          none;
-      }
-
-      h1 {
-
-        letter-spacing:
-          -2px;
-      }
+      .skills-grid, .contact-grid { grid-template-columns: 1fr; }
+      .nav-links { width: 100%; }
+      .nav-links .optional { display: none; }
+      h1 { letter-spacing: -2px; }
     }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
 
     @media (max-width: 500px) {
-
-      nav {
-
-        width:
-          96%;
-
-        padding:
-          7px;
-
-        border-radius:
-          20px;
-      }
-
-
-      .nav-links {
-
-        gap:
-          5px;
-      }
-
-
-      .nav-links .glass-btn {
-
-        padding:
-          9px 12px;
-
-        min-height:
-          40px;
-
-        font-size:
-          13px;
-      }
-
-
-      .profile-photo {
-
-        width:
-          120px;
-
-        height:
-          120px;
-
-        margin-bottom:
-          20px;
-      }
-
-
-      main {
-
-        width:
-          calc(100% - 22px);
-      }
-
-
-      section {
-
-        padding:
-          80px 0 35px;
-      }
-
-
-      .glass-card {
-
-        padding:
-          20px;
-
-        border-radius:
-          22px;
-      }
-
-
-      .hero-description {
-
-        font-size:
-          16px;
-      }
-
-
-      .buttons {
-
-        flex-direction:
-          column;
-      }
-
-
-      .glass-btn {
-
-        width:
-          100%;
-      }
+      nav { width: 96%; padding: 7px; border-radius: 20px; }
+      .nav-links { gap: 5px; }
+      .nav-links .glass-btn { padding: 9px 12px; min-height: 40px; font-size: 13px; }
+      .profile-photo { width: 120px; height: 120px; margin-bottom: 20px; }
+      main { width: calc(100% - 22px); }
+      section { padding: 80px 0 35px; }
+      .glass-card { padding: 20px; border-radius: 22px; }
+      .hero-description { font-size: 16px; }
+      .buttons { flex-direction: column; }
+      .glass-btn { width: 100%; }
     }
-
   </style>
 </head>
 
-
 <body>
   <!-- Light / Dark Mode Toggle -->
-<button class="theme-toggle"
-        id="themeToggle"
-        aria-label="Toggle light and dark mode">
-    🌙
-</button>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">🌙</button>
 
-
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
-
+  <!-- NAVIGATION -->
   <nav>
-
     <div class="nav-links">
-
-      <a
-        href="#home"
-        class="glass-btn"
-      >
-        Home
-      </a>
-
-
-      <a
-        href="#about"
-        class="glass-btn optional"
-      >
-        About
-      </a>
-
-
-      <a
-        href="#skills"
-        class="glass-btn optional"
-      >
-        Skills
-      </a>
-
-
-      <a
-        href="#education"
-        class="glass-btn optional"
-      >
-        Education
-      </a>
-
-
-      <a
-        href="#contact"
-        class="glass-btn primary"
-      >
-        Contact Us
-      </a>
-
+      <a href="#home" class="glass-btn">Home</a>
+      <a href="#about" class="glass-btn optional">About</a>
+      <a href="#skills" class="glass-btn optional">Skills</a>
+      <a href="#education" class="glass-btn optional">Education</a>
+      <a href="#contact" class="glass-btn primary">Contact Us</a>
     </div>
-
   </nav>
 
-
   <main>
-
-
-    <!-- =========================
-         HOME
-    ========================= -->
-
-    <section
-      id="home"
-      class="hero"
-    >
-
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
       <div class="hero-content">
-
-
-        <!-- YOUR IMAGE -->
-
         <div class="profile-photo">
-
-          <img
-            src="58224.png"
-            alt="BOOPATHI THIRUTHANI"
-          >
-
+          <img src="58224.png" alt="BOOPATHI THIRUTHANI - Aspiring Software and Cloud Engineer" width="155" height="155">
         </div>
 
-
-        <span class="badge">
-
-          BCA Student • Aspiring Software & Cloud Engineer
-
-        </span>
-
+        <span class="badge">BCA Student • Aspiring Software & Cloud Engineer</span>
 
         <h1>
-
-          BOOPATHI
-
-          <br>
-
-          <span class="gradient">
-            THIRUTHANI
-          </span>
-
+          BOOPATHI<br>
+          <span class="gradient">THIRUTHANI</span>
         </h1>
 
-
         <p class="hero-description">
-
-          BCA Student | Aspiring Software & Cloud Engineer.
-
-          Passionate about technology, programming,
-          continuous learning and building a strong
-          technical foundation for the future.
-
+          BCA Student at Muthayammal College of Arts and Science | Aspiring Software & Cloud Engineer.
+          Passionate about Python programming, modern technology, and cloud solutions.
         </p>
-
 
         <div class="buttons">
-
-
-          <a
-            href="#about"
-            class="glass-btn primary"
-          >
-            Explore Profile ↓
-          </a>
-
-
-          <a
-            href="#contact"
-            class="glass-btn"
-          >
-            Contact Us
-          </a>
-
-
-          <a
-            href="links.html"
-            class="glass-btn"
-          >
-            LinkedIn ↗
-          </a>
-
-
-          <a
-            href="links.html"
-            class="glass-btn"
-          >
-            Email ↗
-          </a>
-
-
+          <a href="#about" class="glass-btn primary">Explore Profile ↓</a>
+          <a href="#contact" class="glass-btn">Contact Us</a>
+          <a href="https://x.com/BoopathiT28" target="_blank" rel="noopener noreferrer" class="glass-btn">LinkedIn ↗</a>
+          <a href="mailto:contact@yourdomain.com" class="glass-btn">Email ↗</a>
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- =========================
-         ABOUT
-    ========================= -->
-
+    <!-- ABOUT SECTION -->
     <section id="about">
-
-      <h2 class="section-title">
-        About Me
-      </h2>
-
-
-      <p class="section-description">
-
-        My journey toward becoming a Software & Cloud Engineer.
-
-      </p>
-
+      <h2 class="section-title">About Me</h2>
+      <p class="section-description">My journey toward becoming a Software & Cloud Engineer.</p>
 
       <div class="glass-card about-text">
-
-        I am
-        <strong>
-          BOOPATHI THIRUTHANI
-        </strong>,
-        a BCA student at Muthayammal College of Arts and Science
-        with a strong ambition to build a career in software
-        and cloud engineering.
-
+        I am <strong>BOOPATHI THIRUTHANI</strong>, a BCA student at Muthayammal College of Arts and Science with a strong ambition to build a career in software and cloud engineering.
         <br><br>
-
-        I am developing my programming skills with Python
-        and exploring the technologies that shape modern
-        software development and cloud computing.
-
+        I am developing my programming skills with Python and exploring the technologies that shape modern software development and cloud computing.
         <br><br>
-
-        I believe in continuous learning, practical development,
-        and building a strong technical foundation. My goal is
-        to grow into a skilled Software and Cloud Engineer
-        and contribute to meaningful technology projects.
-
+        I believe in continuous learning, practical development, and building a strong technical foundation. My goal is to grow into a skilled Software and Cloud Engineer and contribute to meaningful technology projects.
       </div>
-
     </section>
 
-
-    <!-- =========================
-         SKILLS
-    ========================= -->
-
+    <!-- SKILLS SECTION -->
     <section id="skills">
-
-      <h2 class="section-title">
-        Skills
-      </h2>
-
-
-      <p class="section-description">
-        My current technical foundation.
-      </p>
-
+      <h2 class="section-title">Skills</h2>
+      <p class="section-description">My current technical foundation.</p>
 
       <div class="skills-grid">
-
-
         <div class="glass-card skill-card">
-
-          <h3>
-            Python
-          </h3>
-
-          <p>
-            Aspiring Python Developer
-          </p>
-
-
+          <h3>Python</h3>
+          <p>Aspiring Python Developer</p>
           <div class="skill-tags">
-
-            <span class="tag">
-              Python
-            </span>
-
-            <span class="tag">
-              Programming
-            </span>
-
+            <span class="tag">Python</span>
+            <span class="tag">Programming</span>
           </div>
-
         </div>
 
-
         <div class="glass-card skill-card">
-
-          <h3>
-            GitHub
-          </h3>
-
-          <p>
-            Basic Experience
-          </p>
-
-
+          <h3>GitHub</h3>
+          <p>Basic Experience</p>
           <div class="skill-tags">
-
-            <span class="tag">
-              GitHub
-            </span>
-
-            <span class="tag">
-              Version Control
-            </span>
-
+            <span class="tag">GitHub</span>
+            <span class="tag">Version Control</span>
           </div>
-
         </div>
-
-
       </div>
-
     </section>
 
-
-    <!-- =========================
-         EDUCATION
-    ========================= -->
-
+    <!-- EDUCATION SECTION -->
     <section id="education">
-
-      <h2 class="section-title">
-        Education
-      </h2>
-
-
+      <h2 class="section-title">Education</h2>
       <div class="glass-card">
+        <div class="education-year">Expected Graduation — 2028</div>
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p>Muthayammal College of Arts and Science<br>Currently studying — 2nd Year</p>
+      </div>
+    </section>
 
-        <div class="education-year">
-          Expected Graduation — 2028
+    <!-- CERTIFICATION SECTION -->
+    <section>
+      <h2 class="section-title">Certification</h2>
+      <div class="glass-card certificate">
+        <h3>MongoDB Basics</h3>
+        <p>MongoDB</p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-description">Have an opportunity, idea or question? Feel free to contact me.</p>
+
+      <!-- Four Interactive Emoji Shapes -->
+      <div class="emoji-container" aria-hidden="true">
+        <div class="shape-emoji shape-circle">
+          <svg viewBox="0 0 100 100">
+            <circle class="eye" cx="35" cy="40" r="12" fill="#fff"/>
+            <circle class="pupil" cx="35" cy="40" r="5" fill="#111"/>
+            <circle class="eye" cx="65" cy="40" r="12" fill="#fff"/>
+            <circle class="pupil" cx="65" cy="40" r="5" fill="#111"/>
+            <path d="40 65 Q 50 85 58 78" stroke="#111" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
         </div>
 
-
-        <h3>
-          Bachelor of Computer Applications (BCA)
-        </h3>
-
-
-        <p>
-
-          Muthayammal College of Arts and Science
-
-          <br>
-
-          Currently studying — 2nd Year
-
-        </p>
-
+        <!-- Pill -->
+        <div class="shape-emoji shape-pill">
+          <svg viewBox="0 0 100 100">
+            <circle class="eye" cx="35" cy="40" r="12" fill="#fff"/>
+            <circle class="pupil" cx="35" cy="40" r="5" fill="#111"/>
+            <circle class="eye" cx="65" cy="40" r="12" fill="#fff"/>
+            <circle class="pupil" cx="65" cy="40" r="5" fill="#111"/>
+            <path d="M 40 65 Q 50 55 60 65" stroke="#111" stroke-width="4" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
       </div>
-
-    </section>
-
-
-    <!-- =========================
-         CERTIFICATION
-    ========================= -->
-
-    <section>
-
-      <h2 class="section-title">
-        Certification
-      </h2>
-
-
-      <div class="glass-card certificate">
-
-        <h3>
-          MongoDB Basics
-        </h3>
-
-
-        <p>
-          MongoDB
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================= -->
-
-    <section id="contact">
-
-      <h2 class="section-title">
-        Contact Us
-      </h2>
-
-
-      <p class="section-description">
-
-        Have an opportunity, idea or question?
-        Feel free to contact me.
-
-      </p>
-
 
       <div class="contact-grid">
-
-
-        <!-- CONTACT DETAILS -->
-
         <div class="glass-card">
-
-          <h3>
-            Get In Touch
-          </h3>
-
-
-          <p
-            style="
-              color:#aab6c9;
-              margin-top:8px;
-            "
-          >
-
-            You can connect with me through
-            LinkedIn or email.
-
+          <h3>Get In Touch</h3>
+          <p style="color:#aab6c9; margin-top:8px;">
+            You can connect with me through LinkedIn or email.
           </p>
-
-
           <div class="buttons">
-
-
-            <a
-              href="links.html"
-              class="glass-btn"
-            >
-              LinkedIn ↗
-            </a>
-
-
-            <a
-              href="links.html"
-              class="glass-btn"
-            >
-              Email ↗
-            </a>
-
-
+            <a href="https://x.com/BoopathiT28" target="_blank" rel="noopener noreferrer" class="glass-btn">LinkedIn ↗</a>
+            <a href="mailto:contact@yourdomain.com" class="glass-btn">Email ↗</a>
           </div>
-
         </div>
-
-
-        <!-- FORMSPREE FORM -->
 
         <div class="glass-card">
-
-
-          <!--
-            REPLACE YOUR_FORMSPREE_ID
-            WITH YOUR EXISTING FORMSPREE ID.
-          -->
-
-
-          
-          <form action="https://formspree.io/f/xoeqvqoy" method="POST">
-
-
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-            >
-
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            >
-
-
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              required
-            ></textarea>
-
-
-            <button
-              type="submit"
-              class="glass-btn primary"
-            >
-              Submit
-            </button>
-
-
+          <form id="contactForm" action="https://formspree.io/f/xoeqvqoy" method="POST">
+            <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+            <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
+            <button type="submit" class="glass-btn primary">Submit</button>
           </form>
-
         </div>
-
-
       </div>
-
     </section>
-
-
   </main>
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- SOCIAL MEDIA SECTION -->
+  <section class="social-media">
+    <h2>Social Media</h2>
+    <div class="social-icons">
+      <a href="https://x.com/BoopathiT28" target="_blank" rel="noopener noreferrer" aria-label="X Profile">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/__boopathi_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </section>
 
   <footer>
-
-    © 2026 BOOPATHI THIRUTHANI
-
+    © 2026 BOOPATHI THIRUTHANI. All rights reserved.
   </footer>
-  <!-- Social Media Section -->
-<section class="social-media">
-    <h2>Social Media</h2>
 
-    <div class="social-icons">
+  <script>
+  /* Theme Toggle Logic */
+  const themeToggle = document.getElementById("themeToggle");
+  const savedTheme = localStorage.getItem("portfolio-theme");
 
-        <!-- X -->
-        <a href="https://x.com/BoopathiT28"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="X">
-            <i class="fa-brands fa-x-twitter"></i>
-        </a>
+  if (savedTheme === "light") {
+      document.body.classList.add("light-mode");
+      themeToggle.textContent = "☀️";
+  }
 
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/__boopathi_official/"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+  themeToggle.addEventListener("click", function () {
+      document.body.classList.toggle("light-mode");
+      if (document.body.classList.contains("light-mode")) {
+          themeToggle.textContent = "☀️";
+          localStorage.setItem("portfolio-theme", "light");
+      } else {
+          themeToggle.textContent = "🌙";
+          localStorage.setItem("portfolio-theme", "dark");
+      }
+  });
 
-    </div>
-</section>
+  /* Interactive Eye Tracking & Form Typing Logic */
+  const pupils = document.querySelectorAll(".pupil");
+  const shapeEmojis = document.querySelectorAll(".shape-emoji");
+  const formInputs = document.querySelectorAll("#contactForm input, #contactForm textarea");
 
-<script>
-const themeToggle = document.getElementById("themeToggle");
+  const handlePointerMove = (e) => {
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
 
-const savedTheme = localStorage.getItem("portfolio-theme");
+    pupils.forEach((pupil) => {
+      const eye = pupil.previousElementSibling || pupil;
+      const rect = eye.getBoundingClientRect();
+      const eyeX = rect.left + rect.width / 2;
+      const eyeY = rect.top + rect.height / 2;
 
-if (savedTheme === "light") {
-    document.body.classList.add("light-mode");
-    themeToggle.textContent = "☀️";
-}
+      const angle = Math.atan2(clientY - eyeY, clientX - eyeX);
+      const maxDistance = 4;
+      const distance = Math.min(
+        Math.hypot(clientX - eyeX, clientY - eyeY) / 10,
+        maxDistance
+      );
 
-themeToggle.addEventListener("click", function () {
+      const x = Math.cos(angle) * distance;
+      const y = Math.sin(angle) * distance;
 
-    document.body.classList.toggle("light-mode");
+      pupil.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  };
 
-    if (document.body.classList.contains("light-mode")) {
-        themeToggle.textContent = "☀️";
-        localStorage.setItem("portfolio-theme", "light");
-    } else {
-        themeToggle.textContent = "🌙";
-        localStorage.setItem("portfolio-theme", "dark");
-    }
+  window.addEventListener("mousemove", handlePointerMove);
+  window.addEventListener("touchmove", handlePointerMove);
 
-});
-</script>
+  formInputs.forEach((input) => {
+    input.addEventListener("focus", () => {
+      shapeEmojis.forEach((shape) => shape.classList.add("turned-away"));
+    });
 
-</body>
+    input.addEventListener("blur", () => {
+      const isAnyFocused = Array.from(formInputs).some((i) => i === document.activeElement);
+      if (!isAnyFocused) {
+        shapeEmojis.forEach((shape) => shape.classList.remove("turned-away"));
+      }
+    });
+  });
+  </script>
 </body>
 </html>
