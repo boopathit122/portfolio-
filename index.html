@@ -48,6 +48,61 @@
 .social-icons a:hover {
     transform: translateY(-5px) scale(1.05);
 }
+  /* ☀️🌙 Light / Dark Mode */
+
+body {
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.08);
+}
+
+/* ☀️ LIGHT MODE */
+
+body.light-mode {
+    background: #f5f7fa;
+    color: #111827;
+}
+
+body.light-mode .theme-toggle {
+    background: rgba(255, 255, 255, 0.55);
+    color: #111827;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode p {
+    color: #111827;
+}
 </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -931,6 +986,12 @@
 
 
 <body>
+  <!-- Light / Dark Mode Toggle -->
+<button class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle light and dark mode">
+    🌙
+</button>
 
 
   <!-- =========================
@@ -1433,6 +1494,31 @@
     </div>
 </section>
 
+<script>
+const themeToggle = document.getElementById("themeToggle");
 
+const savedTheme = localStorage.getItem("portfolio-theme");
+
+if (savedTheme === "light") {
+    document.body.classList.add("light-mode");
+    themeToggle.textContent = "☀️";
+}
+
+themeToggle.addEventListener("click", function () {
+
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        themeToggle.textContent = "☀️";
+        localStorage.setItem("portfolio-theme", "light");
+    } else {
+        themeToggle.textContent = "🌙";
+        localStorage.setItem("portfolio-theme", "dark");
+    }
+
+});
+</script>
+
+</body>
 </body>
 </html>
