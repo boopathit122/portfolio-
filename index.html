@@ -62,20 +62,16 @@ body {
     height: 52px;
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.3);
-
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-
     color: white;
     font-size: 22px;
     cursor: pointer;
     z-index: 9999;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     transition: 0.3s ease;
 }
@@ -92,15 +88,39 @@ body.light-mode {
 }
 
 body.light-mode .theme-toggle {
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.75);
     color: #111827;
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.15);
 }
+
+/* Clear text */
 
 body.light-mode h1,
 body.light-mode h2,
 body.light-mode h3,
-body.light-mode p {
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6,
+body.light-mode p,
+body.light-mode span,
+body.light-mode li,
+body.light-mode label,
+body.light-mode a {
+    color: #111827;
+}
+
+/* Glass cards */
+
+body.light-mode .glass,
+body.light-mode .card,
+body.light-mode .social-icons a {
+    background: rgba(255, 255, 255, 0.65);
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Social Media heading */
+
+body.light-mode .social-media h2 {
     color: #111827;
 }
 </style>
